@@ -1,6 +1,6 @@
 
 
-<%= form_tag(pages_calculo_path, method: :get) do %>
+<%= form_tag(pages_calculo_path, method: :post) do %>
 
 <h1>Cantidad de Invitados</h1>
   <%= text_field_tag 'hombres', nil, placeholder: 'Cantidad de hombres' %>
@@ -11,7 +11,7 @@
 
 <h1>Listado</h1>
 
-  <%= select_tag "carne", options_for_select(["Lomo Vetado", "Lomo Liso", "Huachalomo"]), {prompt: 'Seleccione tipo de carne'} %>
+  <%= select_tag 'carne', options_for_select(["Lomo Vetado", "Lomo Liso", "Huachalomo"]), {prompt: 'Seleccione tipo de carne'} %>
   <%= submit_tag 'Enviar' %>
 
 <% end %>
